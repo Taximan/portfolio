@@ -1,0 +1,132 @@
+.contact {
+  background-color: rgb(236, 236, 236);
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+
+.contact__title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  font-size: 62px;
+  font-weight: bolder;
+  max-width: 970px;
+  margin: 0 auto;  
+  padding: 32px 3px;
+}
+
+.contact__main {
+  max-width: 970px;
+  padding: 0 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+    
+}
+
+@media screen and (max-width: 970px) {
+  html body .contact__main {
+    flex-direction: column-reverse;
+  }
+  
+  html body .contact__left {
+    width: 100% !important;
+    max-width: 600px;
+  }
+  
+  html body .contact__right {
+    width: 100% !important;
+    max-width: 600px;
+    margin-bottom: 25px;
+  }
+  
+}
+
+
+
+/*  left  */
+
+.contact__left {
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact__form {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.contact__form .form-group {
+  width: 100%;
+  margin: 4px 0;
+}
+
+.contact__form .form-group label {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-family: 'Roboto', sans-serif;
+  display: block;
+}
+
+.contact__form .form-group input, .contact__form .form-group textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 4px;
+  font-size: 19px;
+  resize: none;
+}
+
+.contact__fname {
+  
+}
+
+.contact__lname {
+  
+}
+
+.contact__email {
+  
+}
+
+.contact__message {
+  
+}
+
+.contact__submit {
+  font-family: Arial;
+  display: block;
+  width: 100%;
+  background-color: #00c853;
+  outline: none;
+  border: 0;
+  color: white;
+  padding: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 16px 0 0 0;
+  cursor: pointer;
+}
+
+.contact__submit:active {
+   background-color: rgb(0, 149, 62);
+}
+
+.contact__submit:disabled {
+  background-color: #444;
+}
+
+
+/*  right  */
+
+.contact__right {
+  width: 100%;
+  font-size: 22px;
+  max-width: 300px;
+}
+
+
+.contact__right .media-object:nth-child(5) {
+  border-bottom: 0;
+}

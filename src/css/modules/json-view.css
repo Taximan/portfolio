@@ -1,0 +1,48 @@
+.json-view {
+  background-color: black;
+  position: relative;
+}
+
+.json-view__tabs {
+  position: absolute;
+  top: -30px;
+}
+
+.json-view__tab {
+  background-color: black;
+  height: 30px;
+  color: white;
+  line-height: 30px;
+  padding: 0 7px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  font-family: arial;
+  border-bottom: 1px dashed rgb(123, 123, 123) 
+}
+
+.json-view__json {
+  font-family: monospace;
+  color: white;
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 450px) {
+  html body .json-view__json {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  html body .json-view__json {
+    font-size: 12px;
+  }
+}
+
+.json-view pre{padding: 0; margin:0;}
+.json-view .string { color: #00C853; }
+.json-view .number { color: darkorange; }
+.json-view .boolean { color: blue; }
+.json-view .null { color: magenta; }
+.json-view .key { color: white }
+

@@ -1,0 +1,100 @@
+.projects {
+  padding-top: 20px;
+  padding-bottom: 70px;
+  background-color: #00C853;
+}
+
+.projects__title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  font-size: 62px;
+  font-weight: bolder;
+  padding: 42px 10px;
+  max-width: 970px;
+  margin: 0 auto; 
+}
+
+.projects__list {
+  max-width: 970px;
+  padding: 0 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  max-width: 300px;
+  min-width: 250px;
+  height: 350px;
+  overflow: hidden;
+  cursor: pointer;
+  background-image: url('http://placekitten.com/g/320/350');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: black;
+}
+
+.project:nth-child(1) {
+  background-image: url('../../media/codepen.png');
+}
+
+.project:nth-child(2) {
+  background-image: url('../../media/angular-crud.png');
+}
+
+.project:nth-child(3) {
+  background-image: url('../../media/socketio.jpg');
+}
+
+.project:nth-child(4) {
+  background-image: url('../../media/carfixr.jpg');
+}
+
+.project__overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translate(-100%, 100%);
+  transition: transform .4s ease-in-out;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.project__overlay--active {
+  transform: translate(0, 0);
+}
+
+.project__title {
+  font-size: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+}
+
+.project__desc {
+  font-size: 18px;
+  margin: 24px 0;
+  font-family: monospace;
+  height: 80px;
+}
+
+.project__button {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  border: 3px solid white;
+  padding: 13px 0;
+  text-align: center;
+  text-transform: uppercase; 
+}
+
+.project__button:active {
+  background-color: rgba(0, 0, 0, 0.9);
+}
