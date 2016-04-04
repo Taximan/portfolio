@@ -2,12 +2,9 @@
   background-color: rgba(0, 0, 0, .86);
   font-size: 2em;
   color: #ddd;
-  padding-bottom: 30px;
 }
 
 .footer__container {
-  max-width: 970px;
-  padding: 0 10px;
   margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
@@ -15,6 +12,7 @@
   align-items: center;
   font-weight: bold;
   font-family: arial;
+  height: 100%;
 }
 
 
@@ -28,6 +26,7 @@
   width: 100%;
   padding-bottom: 12px;
   padding-top: 30px;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 @media screen and (max-width: 600px) {
@@ -58,8 +57,10 @@
 }
 
 .footer__note {
-  margin-top: 23px;
+  width: 100%;
+  padding: 30px 10px;
   line-height: 1.5;
+  background-color: rgba(0, 200, 83, 0.75);
 }
 
 .footer__note-setence {
