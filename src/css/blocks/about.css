@@ -1,6 +1,7 @@
 .about {
   background-color: rgb(236, 236, 236);
-  padding: 40px 0;
+  padding-top: 60px;
+  padding-bottom: 120px;
 }
 
 .about__title {
