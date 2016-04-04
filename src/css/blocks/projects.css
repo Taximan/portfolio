@@ -2,7 +2,7 @@
   padding-top: 20px;
   padding-bottom: 100px;
   background-color: #00C853;
-  background: linear-gradient(to left, #00C853 , #0A8E41); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /*background: linear-gradient(to left, #00C853 , #0A8E41);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .projects__title {
