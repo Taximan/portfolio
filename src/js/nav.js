@@ -16,13 +16,19 @@ function cleanAllNavItemsFromActiveClass() {
   }
 }
 
+const toggleNav = () => navbar.classList.toggle('nav--make-mobile-menu-visiable');
+
 navHam.addEventListener('click', e => {
   e.preventDefault();
-  navbar.classList.toggle('nav--make-mobile-menu-visiable')
+  toggleNav();
 }, false);
 
 export default {
   node: navbar, 
+  
+  // toggles the MOBILE navigation
+  toggleNav: toggleNav,
+  
   setActive(navbarItem) {
     cleanAllNavItemsFromActiveClass();
     switch(navbarItem) {

@@ -25,9 +25,18 @@ import projects from './projects';
 import contact from './contact';
 import footer from './footer';
 
+
+/*
+ * other imports
+ */
+
+import {scrollToY} from './utils';
+
 /*
  * global scripts 
  */
+
+// <SCROLL RELATED STUFF>
 
 window.addEventListener('resize', function () {
   // notify components of intrest
@@ -95,3 +104,19 @@ function scrollManager(pos, els) {
   
   
 }
+
+
+// </SCROLL RELATED STUFF>
+
+
+let buttons = document.querySelectorAll('[data-scroll-to]');
+
+Array.prototype.forEach.call(buttons, el => {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    let targetNode = document.getElementById(this.getAttribute('data-scroll-to'));
+    let targetYPosition = targetNode.offsetTop;
+    scrollToY(targetYPosition, 600);
+    nav.toggleNav();
+  });
+})

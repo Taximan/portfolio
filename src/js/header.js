@@ -1,10 +1,17 @@
 import starify from './starify';
 import type from 'string-typer/loop'
-import {selectElementText, clearSelection, RAF} from './utils';
+import {selectElementText, clearSelection, RAF, scrollToY} from './utils';
 import nav from './nav';
+import aboutSection from './about';
 
 const header = document.getElementsByClassName('header')[0];
 const headerBackground = document.getElementsByClassName('header__background')[0];
+const callToActionBtn = document.getElementsByClassName('header__call-to-action')[0];
+
+callToActionBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  scrollToY(aboutSection.top, 800); 
+})
 
 const videoCanvas = document.createElement('canvas');
 const videoSource = document.getElementById('bgvid');
