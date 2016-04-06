@@ -3,22 +3,32 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 62px;
   background-color: rgba(0, 0, 0, 0);
   z-index: 999;
   transform: translateZ(0);
-  transition: background-color 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
   font-weight: bolder;
+  overflow-y: hidden;
+}
+
+.nav--make-mobile-menu-visiable {
+  overflow-y: visible;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .nav--scrolled {
   background-color: rgba(0, 0, 0, 1);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .74);
 }
+
+
 
 .nav__items {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: flex-end;
 }
 
@@ -43,4 +53,36 @@
 .nav .nav__button--active, .nav__button:active, .nav__button:hover {
   background-color: none !important;
   border-bottom: 3px solid white;
+}
+
+.nav__mobile-nav-toggle {
+  display: none;
+  height: 62px;
+  line-height: 62px;
+  padding: 0 20px;
+  width: 100%;
+  text-align: right;
+  font-size: 1.4em;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  html body .nav__mobile-nav-toggle {
+    display: block;
+  }
+  
+  html body .nav__button {
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 1);
+  }
+  
+  html body .nav.nav--scrolled .nav__button--active, .nav__button:active, .nav__button:hover {
+    border-bottom: none;
+  }
+  
+  html body .nav .nav__button--active, .nav__button:active, .nav__button:hover {
+    border-bottom: none;
+  }
+  
 }

@@ -1,4 +1,5 @@
 let navbar = document.getElementsByClassName('nav')[0];
+let navHam = document.getElementsByClassName('nav__mobile-nav-toggle')[0];
 
 let navbarItems = {
   top: document.getElementsByClassName('nav__top')[0],
@@ -14,6 +15,11 @@ function cleanAllNavItemsFromActiveClass() {
     }
   }
 }
+
+navHam.addEventListener('click', e => {
+  e.preventDefault();
+  navbar.classList.toggle('nav--make-mobile-menu-visiable')
+}, false);
 
 export default {
   node: navbar, 
