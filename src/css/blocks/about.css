@@ -77,26 +77,24 @@
 }
 
 .about__right-bracket, .about__left-bracket {
-  position: absolute;
-  font-size: 2em;
-  top: 0;
-  transition: transform 0.6s ease-in-out;
-}
-
-.about__left-bracket {
-  transform: translateX(-120px);
+  display: inline-block;
+  transition: transform 1.6s ease-in-out;
 }
 
 .about__right-bracket {
-  transform: translateX(100px);
+  transform: translateX(30px);
+}
+
+.about__left-bracket {
+  transform: translateX(-30px);
 }
 
 .about__left-bracket--close {
-  transform: translateX(-60px);
+  transform: translateX(-2px);
 }
 
 .about__right-bracket--close {
-  transform: translateX(20px);
+  transform: translateX(-2px)
 }
 
 /* right */
