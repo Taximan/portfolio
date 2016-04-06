@@ -78,7 +78,7 @@
 
 .about__right-bracket, .about__left-bracket {
   display: inline-block;
-  transition: transform 1.6s ease-in-out;
+  transition: transform .8s ease-in-out;
 }
 
 .about__right-bracket {
