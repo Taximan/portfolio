@@ -117,6 +117,6 @@ Array.prototype.forEach.call(buttons, el => {
     let targetNode = document.getElementById(this.getAttribute('data-scroll-to'));
     let targetYPosition = targetNode.offsetTop;
     scrollToY(targetYPosition, 600);
-    nav.toggleNav();
+    nav.closeNav();
   });
 })

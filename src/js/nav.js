@@ -17,7 +17,7 @@ function cleanAllNavItemsFromActiveClass() {
 }
 
 const toggleNav = () => navbar.classList.toggle('nav--make-mobile-menu-visiable');
-
+const closeNav = () => navbar.classList.remove('nav--make-mobile-menu-visiable');
 navHam.addEventListener('click', e => {
   e.preventDefault();
   toggleNav();
@@ -28,6 +28,7 @@ export default {
   
   // toggles the MOBILE navigation
   toggleNav: toggleNav,
+  closeNav: closeNav,
   
   setActive(navbarItem) {
     cleanAllNavItemsFromActiveClass();
