@@ -37,6 +37,10 @@
     line-height: 1;
   }
   
+  html body .header__call-to-action {
+    font-size: 1em;
+  }
+  
 }
 
 .header__quote {
