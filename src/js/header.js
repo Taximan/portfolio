@@ -38,8 +38,9 @@ function drawVideo () {
 }
 
 let words = [
+  'amazing',
   'elegant',
-  'light',
+  'fast',
   'great',
 ];
 
