@@ -13,6 +13,7 @@ import '../css/blocks/footer.css';
 
 import '../css/modules/json-view.css';
 import '../css/modules/media-object.css';
+import '../css/modules/overlay.css';
 
 /*
  * section scripts 

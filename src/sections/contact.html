@@ -1,3 +1,13 @@
+<template id="contact-overlay-tmpl">
+  <div class="overlay {{additionalClasses}}">
+    <div class="overlay__title">{{title}}</div>
+    <div class="overlay__icon" style="background-image: url('{{iconUrl}}')"></div>
+    <div class="overlay__message">{{message}}</div>
+    <button class="overlay__exit-button" onclick="this.parentNode.remove()">{{buttonText}}</button>
+  </div>
+</template>
+
+
 <div class="contact" id="contact">
   <div class="contact__title">Let's get in touch</div>
   <div class="contact__main">
@@ -7,19 +17,19 @@
       <form class="contact__form">
         <div class="form-group">
           <label for="">first name</label>
-          <input type="text" class="contact__fname">
+          <input type="text" class="contact__fname" required>
         </div>
         <div class="form-group">
           <label for="">last name</label>
-          <input type="text" class="contact__lname">
+          <input type="text" class="contact__lname" required>
         </div>
         <div class="form-group">
           <label for="">email</label>
-          <input type="text" class="contact__email">
+          <input type="email" class="contact__email" required>
         </div>
         <div class="form-group">
-          <label for="">email</label>
-          <textarea id="" cols="30" rows="10" class="contact__message"></textarea>
+          <label for="">message</label>
+          <textarea id="" cols="30" rows="10" class="contact__message" required></textarea>
         </div>
         <div class="form-group">
           <button type="submit" class="contact__submit">send</button>

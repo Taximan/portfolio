@@ -58,6 +58,7 @@
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
+  position: relative;
 }
 
 .contact__form .form-group {

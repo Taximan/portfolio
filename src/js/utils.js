@@ -139,3 +139,55 @@ export function scrollToY(scrollTargetY, speed, easing) {
     // call it once to get started
     tick();
 }
+
+
+/** 
+ * @param {string} s template
+ * @param {Object} d object which keys will be mapped to the template
+ * @return {string} rendered string
+ */
+export function render(s, d) {
+  for (var p in d) {
+    if(d.hasOwnProperty(p))
+      s = s.replace(new RegExp('{{' + p + '}}', 'g'), d[p]);
+  }
+  return s;
+}
+
+export const HTTP = {
+  /**
+   * POST request 
+   * @param {string} url
+   * @param {object} map object to send
+   * @param {function} callback
+   */
+  post(url, map, callback) {
+    var xhr = new XMLHttpRequest();
+    
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    
+    xhr.send(JSON.stringify(map));
+    
+    xhr.onreadystatechange = function () {
+
+      if(xhr.readyState == 4 && xhr.status > 200 && xhr.status < 300) {
+        callback(null, {data: xhr.responseText, code: xhr.status});
+      } else if (xhr.readyState == 4 && xhr.status >= 400) {
+        callback({data: xhr.responseText, code: xhr.status});
+      }
+
+    };
+
+  },
+  
+  head(url, callback) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, true);
+    http.onreadystatechange = function () {
+        if(this.readyState == this.DONE) {
+            callback(this.status != 404);
+        }
+    }
+  }
+}

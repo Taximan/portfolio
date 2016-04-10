@@ -1,0 +1,83 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  color: white;
+  animation: wobble .7s;
+}
+
+.overlay--success {
+  background-color: #009688;
+}
+
+.overlay--failed {
+  background-color: #F44336;
+}
+
+.overlay__title {
+  font-weight: bolder;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.overlay__icon {
+  width: 170px;
+  height: 170px;
+  background-size: cover;
+  margin: 24px 0;
+}
+
+.overlay__message {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.overlay__exit-button {
+  cursor: pointer;
+  border: 3px solid white;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  width: 50%;
+  padding: 12px 0;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+@keyframes wobble {
+  from {
+    transform: none;
+  }
+
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    transform: none;
+  }
+}
