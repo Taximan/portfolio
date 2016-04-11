@@ -35,16 +35,18 @@ if(!detectmob()) {
   
 } else {
   
-  let image = new Image()
+  var image = new Image()
   
   image.src = require('../media/bgmobile.jpg');
   
   image.onload = function () {
-    RAF(function() {
-      ctx.drawImage(image, 0, 0, W, H);
-    });
+    drawImage(image);
   };
   
+}
+
+function drawImage(img) {
+  ctx.drawImage(img, 0, 0, W, H);
 }
 
 function drawVideo () {
@@ -93,7 +95,10 @@ export default {
   onWindowResize() {
     W = window.innerWidth;
     videoCanvas.width = window.innerWidth;
-  },
+    if(detectmob()) {
+      drawImage(image)
+    }
+},
   top: 0,
   bottom: header.offsetTop + header.offsetHeight,
   onEnter() {
