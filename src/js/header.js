@@ -1,6 +1,6 @@
 import starify from './starify';
 import type from 'string-typer/loop'
-import {selectElementText, clearSelection, RAF, scrollToY} from './utils';
+import {selectElementText, clearSelection, RAF, scrollToY, detectmob} from './utils';
 import nav from './nav';
 import aboutSection from './about';
 
@@ -27,10 +27,25 @@ starify(headerBackground, W, H/2, 2, false);
 
 const ctx = videoCanvas.getContext('2d');
 
-videoSource.addEventListener('play', function (e) {
-  RAF(drawVideo);
-}, false);
-
+if(!detectmob()) {
+  
+  videoSource.addEventListener('play', function (e) {
+    RAF(drawVideo);
+  }, false);
+  
+} else {
+  
+  let image = new Image()
+  
+  image.src = require('../media/bgmobile.jpg');
+  
+  image.onload = function () {
+    RAF(function() {
+      ctx.drawImage(image, 0, 0, W, H);
+    });
+  };
+  
+}
 
 function drawVideo () {
   RAF(drawVideo);
