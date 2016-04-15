@@ -42,15 +42,21 @@
 /* left */
 .about__left {
   max-width: 400px;
+  text-align: center;
 }
 
 
 .about__portrait {
   width: 100%;
-  max-width: 400px;
-  height: 400px;
+  height: auto;
   margin-bottom: 20px;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  html body .about__portrait {
+    width: 75%;
+  } 
 }
 
 .about__my-name {
