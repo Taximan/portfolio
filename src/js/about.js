@@ -14,7 +14,7 @@ function calcAge(birthday) { // birthday is a date
 
 let json = JSON.stringify({
   firstName: 'Dawid',
-  secondName: 'Czarnik',
+  lastName: 'Czarnik',
   age: calcAge(new Date('1995-07-21T00:00:00+00:00')),
   knows: {
     general: [
