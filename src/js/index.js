@@ -37,6 +37,11 @@ import {scrollToY} from './utils';
  * global scripts 
  */
 
+// production specific scripts
+if(__PROD__) {
+  require('./GA');
+}
+
 // <SCROLL RELATED STUFF>
 
 window.addEventListener('resize', function () {
